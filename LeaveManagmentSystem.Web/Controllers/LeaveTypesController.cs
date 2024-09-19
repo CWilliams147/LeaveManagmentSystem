@@ -15,7 +15,7 @@ namespace LeaveManagmentSystem.Web.Controllers
         // GET: LeaveTypes
         public async Task<IActionResult> Index()
         {
-            var viewData = _leaveTypesService.GetAll();
+            var viewData = await _leaveTypesService.GetAll();
             return View(viewData);
         }
 
